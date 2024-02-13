@@ -12,10 +12,10 @@ de varias líneas
 
 # 2. Cadenas
 
-"""
+'''
 print('Soy una cadena')
 print("Soy una cadena")
-"""
+'''
 
 a = 'Mi banda favorita es\n'
 b = "Grupo Marrano"
@@ -62,3 +62,15 @@ print(10< 9)
 print(10 >= 9)
 print(10 != 9)
 print(10 <= 9)
+
+
+x=1
+print(x < 5 and x < 10)
+print(x < 5 or x < 10)
+print(not(x < 5 and x < 10))
+
+
+#para operaciones binarias
+print(x < 5 & x < 10)
+print(x < 5 & x < 10)
+print(x < 5 & x < 10)
