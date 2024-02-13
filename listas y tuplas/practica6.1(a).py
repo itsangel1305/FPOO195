@@ -1,32 +1,40 @@
-def capturar_numeros():
-    return tuple((int, input("Ingresa números separados por espacio: ")()))
+from statistics import multimode
 
-def calcular_numeros(nums):
-    moda = max(set(nums), key=nums.count)
-    return {
-        'Sumatoria': sum(nums),
-        'Número mayor': max(nums),
-        'Número menor': min(nums),
-        'Promedio': sum(nums) / len(nums),
-        'Moda': moda,
-        'Rango': max(nums) - min(nums)
-    }
+def capturar_numeros():
+    return tuple(map(int, input("Ingresa números separados por espacio: ").split()))
 
 def menu():
     nums = capturar_numeros()
-    opciones = ['Sumatoria', 'Número mayor', 'Número menor', 'Promedio', 'Moda', 'Rango', 'Salir']
+    operaciones = {
+        '1': ('Sumatoria', lambda nums: sum(nums)),
+        '2': ('Número mayor', lambda nums: max(nums)),
+        '3': ('Número menor', lambda nums: min(nums)),
+        '4': ('Promedio', lambda nums: sum(nums) / len(nums)),
+        '5': ('Moda', lambda nums: multimode(nums)),
+        '6': ('Rango', lambda nums: max(nums) - min(nums)),
+    }
+
     while True:
-        print("\n".join(f"{i}. {opcion}" for i, opcion in enumerate(opciones, 1)))
+        print("\n1. Sumatoria de los elementos de la lista")
+        print("2. Número mayor de la lista")
+        print("3. Número menor de la lista")
+        print("4. Promedio")
+        print("5. Moda")
+        print("6. Rango")
+        print("7. Salir")
+        
         opcion = input("Elige una opción: ")
         
         if opcion == '7':
             print("Saliendo del programa...")
             break
-        elif opcion in [str(i) for i in range(1, 7)]:
-            numeros = calcular_numeros(nums)
-            print(opciones[int(opcion)-1] + ":", numeros[opciones[int(opcion)-1]])
+        elif opcion in operaciones:
+            operacion, funcion = operaciones[opcion]
+            resultado = funcion(nums)
+            print(f"{operacion}: {resultado}")
         else:
             print("Opción no válida. Intenta de nuevo.")
 
 if __name__ == "__main__":
     menu()
+
