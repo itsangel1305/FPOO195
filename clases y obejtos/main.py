@@ -5,9 +5,9 @@ spartan = Personaje()
 Arma= Armas()
 
 #Usamos los atributos Spartan
-print(spartan.nombre)
-print(spartan.especie)
-print(spartan.altura)
+print(spartan.getnombre())
+print(spartan.getespecie())
+print(spartan.getaltura())
 
 #Usamos los metodos del Spartan
 spartan.correr(False)
