@@ -8,7 +8,7 @@ class Usuario:
         self.contraseña = contraseña
         Usuario.usuarios.append(self)
 
-    @classmethod
+
     def verificar_usuario(cls, correo, contraseña):
         for usuario in cls.usuarios:
             if usuario.correo == correo and usuario.contraseña == contraseña:
