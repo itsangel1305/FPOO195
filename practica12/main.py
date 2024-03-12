@@ -19,6 +19,5 @@ def agregar_usuario():
     Usuario(id, nombre, correo, contraseña)  
     mostrarMensajes(correo, contraseña)
     addbtn(correo, contraseña)
-
-# Agregar usuarios desde el main
+    
 agregar_usuario()

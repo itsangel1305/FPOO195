@@ -2,6 +2,8 @@ import tkinter as tk
 from tkinter import messagebox
 from persona import Usuario
 
+
+
 class LoginInterfaz:
     def __init__(self, master):
         self.master = master

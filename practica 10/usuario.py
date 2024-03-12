@@ -1,6 +1,6 @@
 class Usuario:
     usuarios = [] 
-
+   
     def __init__(self, id, nombre, correo, contraseña):
         self.__id = id
         self.__nombre = nombre
