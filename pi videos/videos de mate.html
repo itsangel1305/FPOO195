@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matemáticas Primaria</title>
+<style>
+  body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e8f4f8;
+    color: #34585b;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #27ae60;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #2980b9;
+    margin-bottom: 20px;
+}
+
+.block-btn {
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 15px 25px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    display: inline-block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-weight: 600;
+}
+
+.block-btn:hover {
+    background-color: #2979b7;
+    transform: scale(1.05);
+}
+
+.block {
+    padding: 25px;
+    background-color: #ffffff;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #3498db;
+    display: none;
+}
+
+.block h3 {
+    color: #2980b9;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #34585b;
+}
+
+iframe {
+    border-radius: 8px;
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    border: none;
+}
+
+a {
+    color: #3498db;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2979b7;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .block-btn {
+        padding: 10px 20px;
+        margin: 5px;
+        font-size: 0.9rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Curriculum de Matemáticas para Primaria</h1>
+
+    
+    <script>
+   
+    const years = [
+    {
+        year: "Primer Año de Primaria",
+        blocks: [
+            { title: "Bloque 1: Introducción a las Matemáticas", content: "Introducción a las matemáticas para primer grado, cubriendo conceptos básicos como aprender a contar y Números y operaciones: Identificación de números, contar, sumas y restas básicas.", video: "https://www.youtube.com/embed/klHsqsti6so" },
+            { title: "Bloque 2: Figuras y Cuerpos Geométricos", content: "Cómo enseñar contar, sumar y restar en primer grado de una manera sistemática y las Figuras y cuerpos geométricos: Reconocimiento de formas simples como círculos, cuadrados y triángulos.", video: "https://www.youtube.com/embed/eirCSrVc0Q4" },
+            { title: "Bloque 3: Aprender Sumas y Restas de Manera Divertida", content: "Utiliza aspectos de la vida para hacer que aprender sumas y restas sea divertido para los niños y Medición: Conceptos básicos de medición como largo y alto, y uso de unidades no convencionales.", video: "https://www.youtube.com/embed/Lqf5WmulMYI" },
+            { title: "Bloque 4: Resolución de Problemas", content: "Aplicación de matemáticas básicas en situaciones cotidianas para desarrollar habilidades de resolución de problemas en los estudiantes.", video: "https://www.youtube.com/embed/hyvxHU2RibY" }
+        ]
+    },
+
+    {
+        year: "Segundo Año de Primaria",
+        blocks: [
+            { title: "Bloque 1: Operaciones Matemáticas Avanzadas", content: "Operaciones matemáticas más complejas como sumas y restas con números más grandes, y la introducción de la multiplicación y división básicas.", video: "https://www.youtube.com/embed/FUbla-rPt3M" },
+            { title: "Bloque 2: Geometría Avanzada", content: "Conceptos de geometría más avanzados, como la identificación y características de figuras geométricas.", video: "https://www.youtube.com/embed/JM2cPKpJmrw" },
+            { title: "Bloque 3: Medición Estándar", content: "Medición usando unidades estándar de longitud, peso y capacidad.", video: "https://www.youtube.com/embed/4e-dsOgOIrA" },
+            { title: "Bloque 4: Resolución de Problemas Complejos", content: "Introducción a la resolución de problemas más complejos que involucran varias etapas de cálculo y razonamiento lógico.", video: "https://www.youtube.com/embed/XCc6HtZBFk0" },
+           
+        ]
+    },
+
+    {
+        year: "Tercer Año de Primaria",
+        blocks: [
+            { title: "Bloque 1: Multiplicar y Dividir", content: "Familiarización con las tablas de multiplicar y aprenden a dividir, enfocándose en problemas prácticos y conceptos fundamentales de estas operaciones.", video: "https://www.youtube.com/embed/mQ4wKV9_pZs" },
+            { title: "Bloque 2: Fracciones", content: "Se introduce el concepto de fracciones como representación de partes de un todo, comparación de fracciones y operaciones básicas con fracciones.", video: "https://www.youtube.com/embed/c9cTIjBqFTw" },
+            { title: "Bloque 3: Geometría Avanzada", content: "Ampliación de conocimientos geométricos para incluir el estudio de diferentes tipos de líneas, ángulos, perímetro y área de figuras planas, así como la introducción a la medición de volúmenes.", video: "https://www.youtube.com/embed/wYNvY_bOGdc" },
+            { title: "Bloque 4: Problemas Complejos", content: "Se desarrollan habilidades para resolver problemas más complejos que involucran varias operaciones, aplicando lógica y razonamiento matemático.", video: "https://www.youtube.com/embed/eDfaJMZQQao" }
+        ]
+    },
+
+    {
+        year: "Cuarto Año de Primaria",
+        blocks: [
+            { title: "Bloque 1: Fracciones y Decimales", content: "Se introduce el concepto de decimales y se profundiza en el trabajo con fracciones, incluyendo la suma, resta, multiplicación y división de fracciones y decimales.", video: "https://www.youtube.com/embed/FUbla-rPt3M?start=25" },
+            { title: "Bloque 2: Geometría de Figuras Tridimensionales", content: "Los conceptos geométricos se expanden para incluir el estudio de figuras tridimensionales, la comprensión de las propiedades de estos objetos, y el cálculo de área, volumen y perímetro de formas más complejas.", video: "https://www.youtube.com/embed/8rP37Lmd4Vs" },
+            { title: "Bloque 3: Medición Avanzada", content: "Se cubren conceptos de medición más avanzados, incluyendo el uso de unidades de medida estándar y no estándar, y la conversión entre unidades.", video: "https://www.youtube.com/embed/V_N_mALVOgM" },
+            { title: "Bloque 4: Introducción al Álgebra", content: "Introducción a conceptos básicos de álgebra, incluyendo el uso de variables, expresiones sencillas, y la solución de ecuaciones simples.", video: "https://www.youtube.com/embed/UNWFLuUfiX4" }
+        ]
+    },
+
+    {
+        year: "Quinto Año de Primaria",
+        blocks: [
+            { title: "Bloque 1: Fracciones y Decimales Avanzados", content: "Profundización en la suma, resta, multiplicación y división de fracciones y decimales, incluyendo problemas con múltiples pasos y conversiones entre fracciones y decimales.", video: "https://www.youtube.com/embed/ABvlDnmc8iw" },
+            { title: "Bloque 2: Propiedades Geométricas y Cálculo de Volúmenes", content: "Estudio detallado de propiedades geométricas, incluyendo el cálculo de área y volumen de figuras tridimensionales, y la comprensión de los principios de simetría y transformaciones geométricas.", video: "https://www.youtube.com/embed/QTrE4x5DPZ8" },
+            { title: "Bloque 3: Medición Avanzada y Análisis de Datos", content: "Avances en la medición utilizando unidades estándar y métricas, análisis de datos más complejos, interpretación de gráficos avanzados y introducción a estadísticas básicas.", video: "https://www.youtube.com/embed/9G4HPNVA5w4" },
+            { title: "Bloque 4: Introducción a la Probabilidad", content: "Conceptos básicos de probabilidad, incluyendo la realización de experimentos simples, el cálculo de probabilidades y la comprensión de eventos aleatorios.", video: "https://www.youtube.com/embed/fTIS83G7aC8" }
+        ]
+    },
+
+    {
+        year: "Sexto Año de Primaria",
+        blocks: [
+            { title: "Bloque 1: Geometría Avanzada", content: "Comprensión avanzada de la geometría, incluyendo el estudio de propiedades de figuras geométricas, cálculo de área, volumen, y superficie de figuras tridimensionales, y el uso de escalas para interpretar mapas o planos.", video: "https://www.youtube.com/embed/TgQKq8WyCQk" },
+            { title: "Bloque 2: Fracciones, Decimales y Porcentajes", content: "Manejo experto de fracciones, decimales y porcentajes, incluyendo conversiones entre ellos y su aplicación en contextos de la vida real, como descuentos, intereses y estadísticas.", video: "https://www.youtube.com/embed/RE3XoDORMys" },
+            { title: "Bloque 3: Análisis de Datos y Probabilidad", content: "Análisis e interpretación de datos a través de medidas de tendencia central (media, mediana, modo) y el rango. Introducción a la probabilidad de eventos compuestos y su aplicación en situaciones cotidianas.", video: "https://www.youtube.com/embed/KFB5mWICDeQ" },
+            { title: "Bloque 4: Resolución de Problemas Complejos", content: "Estrategias de resolución de problemas complejos que involucran múltiples pasos y tipos de operaciones, fomentando el pensamiento crítico y la aplicación de diferentes áreas matemáticas para encontrar soluciones.", video: "https://www.youtube.com/embed/xJl0VPrPr38" }
+        ]
+    },
+
+       
+    ];
+
+    function createYearBlock(yearData) {
+        const yearDiv = document.createElement("div");
+        yearDiv.className = "year";
+        yearDiv.innerHTML = `<h2>${yearData.year}</h2>`;
+        yearData.blocks.forEach((block, index) => {
+            const blockId = yearData.year.replace(/\s+/g, '') + 'Block' + index;
+            yearDiv.innerHTML += `
+                <button class="block-btn" onclick="toggleBlock('${blockId}')">${block.title}</button>
+                <div class="block" id="${blockId}">
+                    <h3>${block.title}</h3>
+                    <p class="description">${block.content}</p>
+                    <iframe src="${block.video}" allowfullscreen></iframe>
+                </div>
+            `;
+        });
+        document.querySelector(".container").appendChild(yearDiv);
+    }
+
+    // Generación dinámica de los bloques de años
+    window.onload = function() {
+        years.forEach(createYearBlock);
+    };
+    </script>
+
+    <script>
+    function toggleBlock(blockId) {
+        var block = document.getElementById(blockId);
+        if (block.style.display === "none") {
+            block.style.display = "block";
+        } else {
+            block.style.display = "none";
+        }
+    }
+    </script>
+</div>
+</body>
+</html>
+
