@@ -7,7 +7,14 @@ objControlador= Controlador()
 
 def ejecutaInsert():
    objControlador.insertUsuario(var1.get(),var2.get(),var3.get())
-
+   
+def busUsuario():
+   usuarioBD= objControlador.buscarUsuario(varBus.get())
+   if usuarioBD == []:
+      messagebox.showwarning("Nada","Usuario no encontrado")
+   else:
+      print(usuarioBD)
+   
 #1.
 ventana= Tk()
 ventana.title("CRUD de usuarios")
@@ -48,5 +55,17 @@ Entry(tab1, textvariable=var3).pack()
 
 Button(tab1, text="Guardar usuario",command=ejecutaInsert).pack()
 
+#6. Pestaña 2: Buscar usuario
+
+Label(tab2, text="Buscar Usuario", fg="red", font=("Mono",18)).pack()
+
+varBus= tk.StringVar()
+Label(tab2,text="Id: ").pack()
+Entry(tab2, textvariable=varBus).pack()
+
+Button(tab2,text="Buscar usuario", command=busUsuario).pack()
+
+Label(tab2, text="Registrado:",fg="blue" ,font=("Mono",16)).pack()
+tk.Text(tab2,height=5, width=52).pack()
 
 ventana.mainloop()

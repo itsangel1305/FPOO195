@@ -40,3 +40,32 @@ class Controlador:
             messagebox.showinfo("Exito", "Eso tilin!!!!")
     
          
+    def buscarUsuario(self,id):
+        conex= self.conexion()
+        
+        if(id == ''):
+            messagebox.showwarning("Cuidado", "inputs vacios no sea tibio")
+            conex.close()
+        else:
+            try:
+                cursor = conex.cursor()
+                sqlSelect= "Select * from usuarios where id="+id
+                cursor.execute(sqlSelect)
+                usuario= cursor.fetchall()
+                conex.close()
+                return usuario
+            
+            except sqlite3.OperationalError:
+                print("No se pudo ejecutar la busqueda")
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
